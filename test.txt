@@ -1,0 +1,3 @@
+<br>Name of your feedback:<input type="text" name="other">
+&emsp;&emsp; Description: <textarea rows="4" cols="50">
+</textarea>

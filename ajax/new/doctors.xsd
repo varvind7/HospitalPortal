@@ -1,0 +1,29 @@
+<schema targetNamespace="http://www.docinfo.com"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<element name="doctors">
+		<complexType>
+			<sequence>
+				<element name="doctor" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="name" type="string"/>
+							<element name="email" type="string"/>
+							<element name="dept" type="string"/>
+							<element name="mobile">
+								<simpleType>
+									<restriction base="int">
+										<pattern value="[0-9]{10}"/>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="qual" type="string" minOccurs="1" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>

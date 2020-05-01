@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="registration.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" href="index.js"></script>
+</head>
+<body>
+	<header>
+    <div id="blueHeader">
+      <span id="title" >HospitalPortal </span>
+      <span id="headerNav"><a href="index.html" style="color:#FFFFFF" >Home</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a class="topNav" href="login.html" style="color:#FFFFFF">Login</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Appointment&nbsp;&nbsp; |&nbsp;&nbsp; Search</span>
+      <img src="stethoscope-simple-black-icon-512.png" alt="logo" id="blueLogo">
+    </div>
+                
+</header>
+<div id="divpadding">
+<form style="margin-left:0px">
+
+	First Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Middle Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Last Name
+	<br>
+	<input type="text" name="firstname" required>
+	&nbsp;&nbsp;
+	<input type="text" name="middlename">
+	&nbsp;&nbsp;
+	<input type="text" name="lastname" required>
+	<br><br>
+	<label>Profile Picture:
+	<input type="file" name="profilepic" accept="image/*">
+	</label>
+	Date of Birth:
+	&nbsp;<input type="date" data-date-inline-picker="true" name="dob" required />
+	<br><br>
+	<label>
+		Gender:
+		<input type="radio" name="Gender" value="Male" checked>Male
+		<input type="radio" name="Gender" value="Female">Female
+	</label>
+	<br><br>
+	Mobile Number: &nbsp;
+	<input type="Number" pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}" name="Mobile" required />
+	<br><br>
+	Email id: &nbsp;
+	<input type="email" name="email"  required />
+	<br><br>
+	Address: &nbsp;
+	<input type="text" name="address" required/>
+	<br><br>
+	Password: &nbsp;
+	<input type="password" name="password" required />
+	<br><br>
+	Retype password: &nbsp;
+	<input type="password" name="passwordcheck" required />
+	<br><br>
+	<label>
+		Blood Group:
+		<input type="radio" name="Blood" value="A+" checked>A+
+		<input type="radio" name="Blood" value="O+">O+
+		<input type="radio" name="Blood" value="B+">B+
+		<input type="radio" name="Blood" value="AB+">AB+
+		<input type="radio" name="Blood" value="A-">A-
+		<input type="radio" name="Blood" value="O-">O-
+		<input type="radio" name="Blood" value="B-">B-
+		<input type="radio" name="Blood" value="AB-">AB-
+	</label>
+	<br><br>
+	
+	<label>
+		Medical History:
+	<table>
+		<tr>
+			<th>Disease</th>
+			<th>Time Peroid</th>
+			<th>Medication</th>
+			<th>Remarks</th>
+			<th>Doctors</th>
+
+		</tr>
+	<tr>
+		<td><input type="text" name="Disease1"></td>
+		<td><input type="text" name="timeprd1"></td>
+		<td><input type="text" name="Medication1"></td>
+		<td><input type="text" name="Remarks1"></td>
+		<td><input type="text" name="Doctors1"></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="Disease2"></td>
+		<td><input type="text" name="timeprd2"></td>
+		<td><input type="text" name="Medication2"></td>
+		<td><input type="text" name="Remarks2"></td>
+		<td><input type="text" name="Doctors2"></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="Disease3"></td>
+		<td><input type="text" name="timeprd3"></td>
+		<td><input type="text" name="Medication3"></td>
+		<td><input type="text" name="Remarks3"></td>
+		<td><input type="text" name="Doctors3"></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="Disease4"></td>
+		<td><input type="text" name="timeprd4"></td>
+		<td><input type="text" name="Medication4"></td>
+		<td><input type="text" name="Remarks4"></td>
+		<td><input type="text" name="Doctors4"></td>
+	</tr>
+	</table>
+		 </label>
+		 <button>+</button>
+		 <br>
+	<label>
+		Family History:
+				<table >
+					<tr>
+						<th>Disease</th>
+						<th>Relation</th>
+						<th>Remark</th>
+					</tr>
+					<tr>
+						<td><input type="text" name="Disease1"></td>
+						<td><input type="text" name="Relation1"></td>
+						<td><input type="text" name="Remark1"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="Disease2"></td>
+						<td><input type="text" name="Relation2"></td>
+						<td><input type="text" name="Remark2"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="Disease3"></td>
+						<td><input type="text" name="Relation3"></td>
+						<td><input type="text" name="Remark3"></td>
+					</tr>
+				</table>
+	</label>
+	<br><br>
+	<label>  Other Description:
+	<textarea rows="5" cols="50" placeholder="Enter any other required details to be known">
+		
+	</textarea>
+	</label>
+	<br><br>
+	<input id="submit" type="submit">
+</form>
+</div>
+<footer>
+	<span class="auto-style1">Email&nbsp; </span><span id="preFooter">|&nbsp;&nbsp; Facebook&nbsp;&nbsp; |&nbsp;&nbsp; Twitter&nbsp;&nbsp; |&nbsp; 
+	Google+ </span><br>
+	&copy; Copyright Arvind Narayan - RA1511020010043 - SRM University
+</footer>
+
+</body>
+</html>

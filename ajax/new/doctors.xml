@@ -1,0 +1,25 @@
+<!DOCTYPE doctors SYSTEM "C://Users/varvi/Desktop/html/new/doctor.dtd">
+<doctors>
+	<doctor id='101'>
+		<name>Arvind</name>
+		<email>varvind7@gmail.com</email>
+		<dept>Ortho</dept>
+		<mobile>745745</mobile>
+		<qual>MBBS</qual>
+	</doctor>
+	<doctor id='102'>
+		<name>Ram</name>
+		<email>ram7@gmail.com</email>
+		<dept>ENT</dept>
+		<mobile>7457445</mobile>
+		<qual>MBBS</qual>
+	</doctor>
+	<doctor id='103'>
+		<name>Hari</name>
+		<email>hari@gmail.com</email>
+		<dept>general</dept>
+		<mobile>7457454</mobile>
+		<qual>MBBS</qual>
+		<qual>MS</qual>
+	</doctor>
+</doctors>

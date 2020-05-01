@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="bookAppointment.css" rel="stylesheet" type="text/css">
+	<script >
+		
+		function validateForm(){
+	var fname = document.getElementById("fname").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+	
+	var status = true;
+	
+	document.getElementById("fnamemsg").innerHTML="";
+	document.getElementById("emailmsg").innerHTML="";
+	document.getElementById("phonemsg").innerHTML="";
+	
+	if(phone == "") {
+		document.getElementById("phonemsg").innerHTML="Please fill out this field";
+		status=false;
+	}
+	
+	if(email == "")
+	{
+		document.getElementById("emailmsg").innerHTML="Please fill out this field";
+		status=false;
+	}
+	//if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)==false)
+	/*if(/^[a-zA-Z._0-9]+@[a-zA-Z._]+(\.[a-zA-Z]{2,3})+$/.test(email)==false)
+	{
+		alert("Invalid email id");
+		status=false;	
+	}*/
+	return status;
+}
+
+	function checkMail()
+	{
+		var email = document.getElementById("email").value;
+		if(/^[a-zA-Z._0-9]+@[a-zA-Z._]+(\.[a-zA-Z]{2,3})+$/.test(email)==false)
+		{
+		alert("Invalid email id");
+		 document.getElementById("email").focus();
+		}
+	}
+	function checkNumber()
+	{
+		var phone = document.getElementById("phone").value;
+		document.getElementById("phonemsg").innerHTML="";
+		if(/^[+]?[0-9]{1,2}?[0-9]{10}$/.test(phone)==false)
+		{
+		alert("Invalid phone Number");
+		document.getElementById("phonemsg").innerHTML="Enter with Country code";
+		 document.getElementById("phone").focus();
+		}
+
+	}
+
+	function checkCost()
+	{
+		var visitType = document.myf.visitType.value;
+		
+		document.getElementById("costMsg").innerHTML="";
+		if(visitType=="Basic Consultancy")
+		{
+				document.getElementById("costMsg").innerHTML="Cost:	Rs.400";
+		}
+		if(visitType=="Monthly Checkup")
+		{
+				document.getElementById("costMsg").innerHTML="Cost:	Rs.200";
+		}
+		if(visitType=="New illness")
+		{
+			alert(visitType+": additional charges applicable");
+				document.getElementById("costMsg").innerHTML="Cost:	Rs.200+additional charges";
+		}
+
+
+
+	}
+
+
+	</script>
+
+</head>
+<body>
+	<header>
+    <div id="blueHeader">
+      <span id="title" >HospitalPortal </span>
+      <span id="headerNav"><a href="index.html" style="color:#FFFFFF" >Home</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a class="topNav" href="login.html" style="color:#FFFFFF">Login</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Appointment&nbsp;&nbsp; |&nbsp;&nbsp; Search</span>
+      <img src="stethoscope-simple-black-icon-512.png" alt="logo" id="blueLogo">
+    </div>
+                
+</header>
+<div id="divpadding">
+<form method="post" action="" onSubmit="return validateForm()" name="myf">
+ 		<label>First name: </label>
+ 		<input name="fname"  disabled id="fname" type="text" placeholder="Your Name" />
+ 		<span id="fnamemsg"></span>
+ 		<br><br>
+ 		<label>Confirm Email: </label>
+ 		
+	<input name="email" id="email" type="text" onchange="checkMail()">
+	<span id="emailmsg"></span>
+	<br><br>
+	<label>Phone: </label>
+		<input name="phone" id="phone" type="text" onchange="checkNumber()">
+		<span id="phonemsg"></span>
+		<br><br>
+
+		<label>
+			Book Appointment with:
+			<select name="dName">
+  				<option value="Doctor 1">Doctor 1</option>
+  				<option value="Doctor 2">Doctor 2</option>
+ 			    <option value="Doctor 3">Doctor 3</option>
+  				<option value="Doctor 4">Doctor 4</option>
+</select>
+		</label>
+		<br><br>
+		<label>
+			Most convenient Day of week:<br>
+			<input type="checkbox" name="week" value="Monday">Monday</input><br>
+			<input type="checkbox" name="week" value="Tuesday">Tuesday</input><br>
+			<input type="checkbox" name="week" value="Wednesday">Wednesday</input><br>
+			<input type="checkbox" name="week" value="Thursday">Thursday</input><br>
+			<input type="checkbox" name="week" value="Friday">Friday</input><br>
+			<input type="checkbox" name="week" value="Saturday">Saturday</input><br>
+			<input type="checkbox" name="week" value="Sunday" checked>Sunday</input><br>
+		</label>
+		<label><br>
+			Prefered Timings:<br>
+			<input type="checkbox" name="Timings" value="8-10am">8-10am</input><br>
+			<input type="checkbox" name="Timings" value="10-12pm">10-12pm</input><br>
+			<input type="checkbox" name="Timings" value="4-6pm">4-6pm</input><br>
+			<input type="checkbox" name="Timings" value="6-8pm">6-8pm</input><br>
+			<input type="checkbox" name="Timings" value="8-10pm">8-10pm</input><br>
+			
+		</label>
+		
+		<br>
+		<label>
+			Type of Visit:<br>
+			<input type="radio" name="visitType" value="Basic Consultancy"  onClick="checkCost()">Basic Consultancy<br>
+			<input type="radio" name="visitType" value="Monthly Checkup" onClick="checkCost()">Monthly Checkup<br>
+			<input type="radio" name="visitType" value="New illness" onClick="checkCost()">New illness<br>
+		</label>
+		<br>
+		<span id="costMsg">Cost:&nbsp;Rs.200</span><br>
+		<input name="Submit1" type="submit" value="Check Appointment" id="submit">
+		<br>
+
+	</form>
+
+
+</div>
+<footer>
+	<span class="auto-style1">Email&nbsp; </span><span id="preFooter">|&nbsp;&nbsp; Facebook&nbsp;&nbsp; |&nbsp;&nbsp; Twitter&nbsp;&nbsp; |&nbsp; 
+	Google+ </span><br>
+	&copy; Copyright Arvind Narayan - RA1511020010043 - SRM University
+</footer>
+
+</body>
+</html>

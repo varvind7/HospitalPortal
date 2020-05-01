@@ -1,0 +1,8 @@
+<!ELEMENT doctors (doctor*)>
+<!ELEMENT doctor (name,email,dept,mobile,qual+) >
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT dept (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT qual (#PCDATA)>
+

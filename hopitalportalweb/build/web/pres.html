@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Prescription
+</title>
+<script type="text/javascript">
+	function viewPres()
+	{
+		var table = document.getElementById('pre');
+		var medElement = document.getElementById('med');
+		var frequencyElement = document.getElementById('frequency');
+		var conditionElement = document.getElementById('condition');
+		var durationElement = document.getElementById('duration');
+		var notesElement = document.getElementById('notes')
+		
+		var medText = medElement.value;
+		var frequencyText = frequencyElement.value;
+		var conditionText = conditionElement.value;
+		var durationText = durationElement.value
+		if(notesElement.value == "")
+		{
+			var notesText = "-";
+		}
+		else
+		{
+			var notesText = notesElement.value;
+		}
+		
+		var tr = document.createElement('tr');
+		var med = document.createTextNode(medText);
+		var frequency = document.createTextNode(frequencyText);
+		var condition = document.createTextNode(conditionText);
+		var duration = document.createTextNode(durationText);
+		var notes = document.createTextNode(notesText);
+		
+		var td1 = document.createElement('td');
+		td1.appendChild(med);
+		tr.appendChild(td1);
+		
+		var td2 = document.createElement('td');
+		td2.appendChild(frequency);
+		tr.appendChild(td2);
+
+		var td3 = document.createElement('td');		
+		td3.appendChild(condition);
+		tr.appendChild(td3);
+
+		var td4 = document.createElement('td');		
+		td4.appendChild(duration);
+		tr.appendChild(td4);
+
+		var td5 = document.createElement('td');
+		td5.appendChild(notes);
+		tr.appendChild(td5);
+
+		table.appendChild(tr);
+	}
+</script>
+</head>
+
+<body>
+<form method="post" action="" onsubmit="viewPres">
+<fieldset name="PatientDetails">
+	<legend>Patient Details</legend>
+	    <br>
+		<table style="width: 100%">
+			<tr>
+				<td style="width: 402px">Name:</td>
+				<td>Arvind Narayan</td>
+			</tr>
+			<tr>
+				<td style="width: 402px">Date of Birth: </td>
+				<td>24-04-1997</td>
+			</tr>
+			<tr>
+				<td style="width: 402px">Phone:</td>
+				<td>8754539863</td>
+			</tr>
+			<tr>
+				<td style="width: 402px">Email:</td>
+				<td>varvind7@gmail.com</td>
+			</tr>
+			<tr>
+				<td style="width: 402px">Diagnosis:</td>
+				<td><input required="" name="Text4" type="text"></td>
+			</tr>
+	</table><br>
+	</fieldset>
+	<br><br>
+	<fieldset name="Prescription">
+				<legend>Enter Medicines</legend><br>
+				<table style="width: 100%">
+					<tr>
+						<td style="width: 400px">Name of Medication: 
+						</td>
+						<td> 
+						<input required id="med" name="Text1" type="text"></td>
+					</tr>
+					<tr>
+						<td style="width: 400px">Frequency:</td>
+						<td>
+						<input id="frequency" required name="Text3" type="number"> time/s per 
+						day</td>
+					</tr>
+					<tr>
+						<td style="width: 400px">Condition:
+						</td>
+						<td>
+						<textarea id="condition" required cols="20" name="TextArea1" rows="2"></textarea></td>
+					</tr>
+					<tr>
+						<td style="width: 400px">Duration: </td>
+						<td><input id="duration" required name="Text2" type="number"> days</td>
+					</tr>
+					<tr>
+						<td style="width: 400px">Notes:</td>
+						<td><textarea id="notes" cols="20" name="TextArea2" rows="2"></textarea></td>
+					</tr>
+					<tr>
+						<td style="width: 400px">&nbsp;</td>
+						<td>
+				<input name="Add" type="submit" value="add" style="width: 166px" onclick="viewPres()"/></td>
+					</tr>
+				</table>
+				&nbsp;<br>
+			</fieldset>
+</form>
+
+<br>
+
+<fieldset name="Group1">
+				<legend>Prescription</legend>
+				
+				<table id="pre" style="width: 100%">
+					<tr>
+						<td style="width: 325px">Name of Medication</td>
+						<td style="width: 284px">Frequency</td>
+						<td style="width: 308px">Condition</td>
+						<td style="width: 159px">Duration</td>
+						<td>Notes</td>
+					</tr>
+					
+				</table>
+				<p id="pres"></p>
+			</fieldset>
+</body>
+
+</html>

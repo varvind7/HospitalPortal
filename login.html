@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<link href="login.css" rel="stylesheet" type="text/css">
+<script>
+function validateForm() {
+    var x = document.forms["login"]["username"].value;
+    var y = document.forms["login"]["password"].value;
+    if (x == "" || y=="") {
+        alert("Name and password must not be left blank");
+        return false;
+    }
+}
+</script>
+</head>
+
+<body>
+<header>
+    <div id="blueHeader">
+      <span id="title">  HospitalPortal</span>
+      <span id="headerNav"><a class="topNav" href="index.html" >Home</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a class="topNav" href="login.html" >Login</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Appointment&nbsp;&nbsp; |&nbsp;&nbsp; Search</span>
+      <img src="stethoscope-simple-black-icon-512.png" alt="logo" id="blueLogo">
+    </div>
+    <img src="slider2.jpg" alt="doctors" id="doctors">             
+</header>
+<main>
+
+<table style="width: 100%">
+	<tr>
+		<td id="sideMenu">
+		  <br><a href="Login.html" class="nav">     Login  </a>	<br><br>
+	
+	
+<a href="registration.html"class="nav" >      Patient Registration  </a><br><br>
+<a href="registrationDoctor.html" class="nav" >    Doctor Registration  </a><br><br>
+
+<a href="MedicalHistory.html" class="nav">   Medical History  </a>	<br><br>
+<a href="DoctorSearch.html" class="nav" >     Doctor Search  </a>	<br><br>
+<a href="bookAppointment.html" class="nav">    Book Appointment  </a>	<br><br>
+
+		</td>
+		<td id="login" >
+		  <p align="Center"><h1>Login</h1></p>
+	<br><br>
+	<form name="login" onsubmit="return validateForm()"  >
+	<label >
+		USERNAME:
+		<input type="text" name="username" align="center" >
+
+	</label>
+	<br><br>
+	<label>
+		PASSWORD:
+		<input type="password" name="password" align="center" >
+	</label>
+	<br><br>
+	<label>
+		USER TYPE:
+		<input type="radio" name="type" value="Patient" checked>Patient
+	<input type="radio" name="type" value="Doctor">Doctor
+
+	</label>
+	<br><br>
+	<input type="submit" name="" value="Login" style="background-color:#01A4EF; padding:5px; color:#FFFFFF">
+	</form>
+		</td>
+	</tr>
+</table>
+
+</main>
+<footer>
+	<span class="auto-style1">Email&nbsp; </span><span id="preFooter">|&nbsp;&nbsp; Facebook&nbsp;&nbsp; |&nbsp;&nbsp; Twitter&nbsp;&nbsp; |&nbsp; 
+	Google+ </span><br>
+	&copy; Copyright Arvind Narayan - RA1511020010043 - SRM University
+</footer>
+</body>
+
+</html>
